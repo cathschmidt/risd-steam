@@ -1,11 +1,3 @@
-@font-face
-{
-	font-family: 'Proxima Nova Bold';
-	/* will figure out fonts soon. have heart set on Avenir + Simplon, but
-	web font options may not be available for them */
-	src: url('ProximaNova-Bold.ttf');
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -13,7 +5,7 @@
 }
 
 body {
-	font-family:'Proxima Nova Bold';
+	font-family:'Avenir Next LT Pro';
 	font-weight:bold;
 	color: #0e0e0e;
 }
@@ -23,7 +15,7 @@ h1 {
 }
 
 div {
-	border: 1px solid red;
+	border: 0px solid red;
 }
 
 div.eighty {
@@ -51,6 +43,7 @@ img#logo {
 
 div#tagline {
 	color: #FFC127;
+	font-family:'Avenir Next LT Pro';
 	font-weight:bold;
 	font-size: 80px;
 	line-height: 90px;
@@ -64,12 +57,7 @@ div#tagline {
 div#events {
 	margin-top:20%;
 	margin-bottom: 10%;
-	clear:both; 
-}
-
-div#events h1 {
 	clear:both;
-	display:inline-block;
 }
 
 div.row {
@@ -78,8 +66,8 @@ div.row {
 
 div.event {
 	float:left;
-	height: 250;
-	width: 250;
+	height: 300px;
+	width:300px;
 	padding: 20px;
 	background-color: #0e0e0e;
 	margin-right: 20px;

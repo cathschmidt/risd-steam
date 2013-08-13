@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	color: #000;
+}
+
+.test {
+	width: 70%;
+	margin:auto;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.small {
+	font-family:'Cutive Mono';
+	font-size: 12px;
+	line-height: 15px;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 60px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+h2 {
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 40px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
