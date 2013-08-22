@@ -1,0 +1,246 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-weight: normal;
+		}
+
+		body {
+			font-family: 'Montserrat';
+			font-weight: 400;
+			color: #000;
+		}
+		
+		a {
+			color: #757373;
+			text-decoration: none;
+		}
+		
+		a:hover {
+		
+		}
+
+		.test {
+			width: 70%;
+			margin:auto;
+		}
+
+		strong {
+			font-weight: 700;
+		}
+		
+		div#nav {
+			background: black;
+			color: white;
+			position: fixed;
+			top: 0px;
+			font-family: Monaco, monospace;
+			padding: 15px;
+			width: 100%;
+			text-align: center;
+			z-index: 5;
+		}
+
+		div#nav a{
+			color: white;
+			text-decoration: none;
+		}
+		
+		span#name {
+			color: #FFC127;
+			font-size: 35px;
+		}
+		
+		img#logo {
+			position: fixed;
+			top: 10%;
+			left: 3%;
+			width: 100px;
+			height: auto;
+			z-index: 2;
+		}
+		
+		div#details {
+			position: fixed;
+			top: 25%;
+			left: 2%;
+			width: 130px;
+			height: auto;
+			z-index: 2;
+			display: inline;
+		}
+		
+		div#seventy {
+			margin-top: 25px;
+			margin-bottom: 25px;
+			margin-left: 15%;
+			margin-right: 15%;
+			z-index: 1;
+			clear: all;
+		}
+		
+		h1 {
+			font-size: 20px;
+			color: black;
+			text-decoration: none;
+		}
+		
+		h2 {
+			font-size: 12px;
+			color: #838B8B;
+			font-family: Monaco, monospace;
+		}
+		
+		div.description{
+			background: #eeeeee;
+			padding: 10px;
+			width: 100%;
+			text-align: justify;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		
+		#seventy img{
+			width: 500px;
+			height: auto;
+			text-align: center;
+		}
+		
+		div#pagenav {
+		
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div id="nav"><a href="http://steamengine.org">steam engine</a> // <a href="#cal_link">events</a> // <a href="#blog_link">blog</a> // <a href="#endblock">about &#38; contact</a> </div>
+		<img id="logo" src="logo.png"> 
+		<span id="name">RISD STEAM</span> 
+		<div id="details">This is the official blog for <a href="http://risd.steamengine.org">RISD STEAM</a>.</div>
+		
+		<div id="seventy">
+		
+		<h1>Example Title</h1>
+		<h2>Posted by Lukas on 22 August 2013</h2>
+		<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+
+Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</div>
+		
+		</div>
+		
+		<!--
+		
+		<ol id="posts">
+            {block:Posts}
+                {block:Text}
+                    <li class="post text">
+                        {block:Title}
+                            <h1><a href="{Permalink}">{Title}</a></h1>
+                        {/block:Title}
+
+                        <div class="description">{Body}</div>
+                    </li>
+                {/block:Text}
+
+                {block:Photo}
+                    <li class="post photo">
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="description">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photo}
+
+                {block:Panorama}
+                    <li class="post panorama">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+
+                        {block:Caption}
+                            <div class="description">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Panorama}
+
+                {block:Photoset}
+                    <li class="post photoset">
+                        {Photoset-500}
+
+                        {block:Caption}
+                            <div class="description">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photoset}
+
+                {block:Quote}
+                    <li class="post quote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+                {/block:Quote}
+
+                {block:Link}
+                    <li class="post link">
+                        <h1><a href="{URL}" class="link" {Target}>{Name}</a> &rarr; </h1>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+                {/block:Link}
+
+                {block:Chat}
+                    <li class="post chat">
+                        {block:Title}
+                            <h1><a href="{Permalink}">{Title}</a></h1>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+                {/block:Chat}
+
+                {block:Video}
+                    <li class="post video">
+                        {Video-500}
+
+                        {block:Caption}
+                            <div class="description">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Video}
+
+                {block:Audio}
+                    <li class="post audio">
+                        {AudioPlayerBlack}
+
+                        {block:Caption}
+                            <div class="description">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Audio}
+            {/block:Posts}
+        </ol>
+
+-->
+
+	</body>
+</html>
