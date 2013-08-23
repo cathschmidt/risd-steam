@@ -43,6 +43,7 @@
 			width: 100%;
 			text-align: center;
 			z-index: 5;
+			margin-bottom: 5px;
 		}
 
 		div#nav a{
@@ -101,17 +102,29 @@
 			width: 100%;
 			text-align: justify;
 			margin-top: 10px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 		
 		#seventy img{
 			width: 500px;
 			height: auto;
-			text-align: center;
 		}
 		
 		div#pagenav {
 		
+		}
+		
+		div.pagelink {
+			text-align: center;
+			width: 100%;
+			font-family: Monaco, monospace;
+			font-size: 12px;
+			color: #838B8B;
+			margin-bottom: 20px;
+		}
+		
+		div.quotesource{
+			padding-left: 10px;
 		}
 		
 		</style>
@@ -123,41 +136,30 @@
 		<div id="details">This is the official blog for <a href="http://risd.steamengine.org">RISD STEAM</a>.</div>
 		
 		<div id="seventy">
-		
-		<h1>Example Title</h1>
-		<h2>Posted by Lukas on 22 August 2013</h2>
-		<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-
-Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</div>
-		
-		</div>
-		
-		<!--
-		
-		<ol id="posts">
+			
             {block:Posts}
                 {block:Text}
-                    <li class="post text">
                         {block:Title}
-                            <h1><a href="{Permalink}">{Title}</a></h1>
+                            <h1>{Title}</h1>
+                            <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         {/block:Title}
 
                         <div class="description">{Body}</div>
-                    </li>
+                        <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Text}
 
                 {block:Photo}
-                    <li class="post photo">
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    </li>
+                        <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Photo}
 
                 {block:Panorama}
-                    <li class="post panorama">
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         {LinkOpenTag}
                             <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
                         {LinkCloseTag}
@@ -165,41 +167,41 @@ Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    </li>
+                        <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Panorama}
 
                 {block:Photoset}
-                    <li class="post photoset">
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         {Photoset-500}
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    </li>
+                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Photoset}
 
                 {block:Quote}
-                    <li class="post quote">
-                        "{Quote}"
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                        <div style="font-size: 30px" class="description">"{Quote}"</div>
 
                         {block:Source}
-                            <div class="source">{Source}</div>
+                            <div class="quotesource">{Source}</div>
                         {/block:Source}
-                    </li>
+                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Quote}
 
                 {block:Link}
-                    <li class="post link">
-                        <h1><a href="{URL}" class="link" {Target}>{Name}</a> &rarr; </h1>
+                        <h1><a href="{URL}" class="link" {Target}>{Name} &rarr;</a></h1>
+                        <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
 
                         {block:Description}
                             <div class="description">{Description}</div>
                         {/block:Description}
-                    </li>
+                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Link}
 
                 {block:Chat}
-                    <li class="post chat">
+		                <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         {block:Title}
                             <h1><a href="{Permalink}">{Title}</a></h1>
                         {/block:Title}
@@ -215,32 +217,31 @@ Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, 
                                 </li>
                             {/block:Lines}
                         </ul>
-                    </li>
+                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Chat}
 
                 {block:Video}
-                    <li class="post video">
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         {Video-500}
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    </li>
+                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Video}
 
                 {block:Audio}
-                    <li class="post audio">
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
                         {AudioPlayerBlack}
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    </li>
+                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Audio}
             {/block:Posts}
-        </ol>
 
--->
+</div>
 
 	</body>
 </html>
