@@ -1,119 +1,126 @@
 <html>
 	<head>
+        <title>{Title}</title>
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+
+        <link rel="shortcut icon" href="http://ltwp.net/steam/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://ltwp.net/steam/favicon.ico" type="image/x-icon">
+
 		<style type="text/css">
-		* {
-			margin: 0;
-			padding: 0;
-			font-weight: normal;
+		    * {
+    			margin: 0;
+    			padding: 0;
+    			font-weight: normal;
+    		}
+
+	    	body {
+    			font-family: 'Montserrat';
+	    		font-weight: 400;
+		    	color: #000;
+                font-size: 13px;
+                line-height: 20px;
+    		}
+
+	    	a {
+		    	color: #cc0000;
+			    text-decoration: none;
+    		}
+
+	    	a:hover {
+                color: #9e0000;
+	    	}
+
+		    .test {
+			    width: 70%;
+    			margin:auto;
+    		}
+
+	    	strong {
+		    	font-weight: 700;
 		}
 
-		body {
-			font-family: 'Montserrat';
-			font-weight: 400;
-			color: #000;
-		}
-		
-		a {
-			color: #757373;
-			text-decoration: none;
-		}
-		
-		a:hover {
-		
-		}
 
-		.test {
-			width: 70%;
-			margin:auto;
-		}
-
-		strong {
-			font-weight: 700;
-		}
-		
-		div#nav {
-			background: black;
-			color: white;
-			position: fixed;
-			top: 0px;
-			font-family: Monaco, monospace;
-			padding: 15px;
-			width: 100%;
-			text-align: center;
-			z-index: 5;
-			margin-bottom: 5px;
-		}
-
-		div#nav a{
-			color: white;
-			text-decoration: none;
-		}
-		
 		span#name {
 			color: #FFC127;
 			font-size: 35px;
 		}
-		
+
 		img#logo {
-			position: fixed;
-			top: 10%;
-			left: 3%;
-			width: 100px;
+			top: 0px;
+			left: 0px;
+			width: 150px;
 			height: auto;
 			z-index: 2;
+                text-align: center;
 		}
-		
+
 		div#details {
 			position: fixed;
-			top: 25%;
+			top: 25px;
 			left: 2%;
-			width: 130px;
+			width: 150px;
 			height: auto;
 			z-index: 2;
 			display: inline;
+                font-size: 11px;
+                text-align: center;
 		}
-		
-		div#seventy {
+
+		div#fivehundo {
 			margin-top: 25px;
 			margin-bottom: 25px;
-			margin-left: 15%;
-			margin-right: 15%;
+			margin-left: 25%;
+                width: 500px;
 			z-index: 1;
-			clear: all;
+			clear: both;
 		}
-		
+
 		h1 {
 			font-size: 20px;
 			color: black;
 			text-decoration: none;
 		}
-		
+
 		h2 {
 			font-size: 12px;
 			color: #838B8B;
 			font-family: Monaco, monospace;
 		}
-		
+
 		div.description{
 			background: #eeeeee;
 			padding: 10px;
-			width: 100%;
+			width: 480px;
 			text-align: justify;
-			margin-top: 10px;
 			margin-bottom: 10px;
 		}
-		
-		#seventy img{
+
+            .description a{
+                color: black;
+                text-decoration: underline;
+            }
+
+            .description a:hover{
+                color: black;
+                text-decoration: none;
+            }
+
+		#fivehundo img{
 			width: 500px;
 			height: auto;
+                margin: auto;
+                margin-bottom: 10px;
 		}
-		
+
 		div#pagenav {
-		
+                text-align: center;
+                width: 100%;
+			font-family: Monaco, monospace;
+			font-size: 16px;
+			margin-bottom: 20px;
 		}
-		
+
 		div.pagelink {
 			text-align: center;
 			width: 100%;
@@ -122,44 +129,99 @@
 			color: #838B8B;
 			margin-bottom: 20px;
 		}
-		
+
 		div.quotesource{
-			padding-left: 10px;
+			padding-left: 20px;
 		}
-		
+
+            blockquote {
+				border-left: 2px solid {color:Text};
+				padding: 0 0 0 15px;
+				margin-left: 0px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+			}
+
+            #endblock {
+                clear: both;
+                background: black;
+                color: white;
+                width: 100%;
+                z-index: 5;
+                position: absolute;
+                left: 0px;
+                font-size: 14px;
+            }
+
+            #endblock h1 {
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                padding-right: 10px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+
+            #endblock #about{
+                width: 60%;
+                float: left;
+                display: inline;
+                margin-bottom: 30px;
+                padding-left: 5%
+            }
+            #endblock #contact1{
+                width: 10%;
+                float: right;
+                display: inline;
+                margin-bottom: 30px;
+                font-family: Monaco, monospace;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            #endblock #contact2{
+                width: 20%;
+                float: right;
+                display: inline;
+                margin-bottom: 30px;
+                font-size: 14px;
+                line-height: 14px;
+            }
+
+
 		</style>
 	</head>
 	<body>
-		<div id="nav"><a href="http://steamengine.org">steam engine</a> // <a href="#cal_link">events</a> // <a href="#blog_link">blog</a> // <a href="#endblock">about &#38; contact</a> </div>
-		<img id="logo" src="logo.png"> 
-		<span id="name">RISD STEAM</span> 
-		<div id="details">This is the official blog for <a href="http://risd.steamengine.org">RISD STEAM</a>.</div>
-		
-		<div id="seventy">
-			
+
+        <div id="details"><a href="http://brownsteam.tumblr.com"><img id="logo" src="http://ltwp.net/steam/brown_logo.png" /></a><br />
+            <a href="#about">about</a> &#8967; <a href="/tagged/events">events</a></div>
+
+		<div id="fivehundo">
+
             {block:Posts}
                 {block:Text}
                         {block:Title}
                             <h1>{Title}</h1>
-                            <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                            <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
                         {/block:Title}
 
                         <div class="description">{Body}</div>
-                        <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Text}
 
                 {block:Photo}
-                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
-                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
+            <div class="imgbox"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></div>
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                        <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Photo}
 
                 {block:Panorama}
-                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
                         {LinkOpenTag}
                             <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
                         {LinkCloseTag}
@@ -167,41 +229,45 @@
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                        <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Panorama}
 
                 {block:Photoset}
-                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
                         {Photoset-500}
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Photoset}
 
                 {block:Quote}
-                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
-                        <div style="font-size: 30px" class="description">"{Quote}"</div>
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
+            <div style="font-size: 30px line-height: 35px;" class="description">"{Quote}"</div>
 
                         {block:Source}
                             <div class="quotesource">{Source}</div>
                         {/block:Source}
-                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Quote}
 
                 {block:Link}
                         <h1><a href="{URL}" class="link" {Target}>{Name} &rarr;</a></h1>
-                        <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                        <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
 
                         {block:Description}
                             <div class="description">{Description}</div>
                         {/block:Description}
-                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Link}
 
                 {block:Chat}
-		                <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+		                <h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
                         {block:Title}
                             <h1><a href="{Permalink}">{Title}</a></h1>
                         {/block:Title}
@@ -217,31 +283,74 @@
                                 </li>
                             {/block:Lines}
                         </ul>
-                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Chat}
 
                 {block:Video}
-                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
                         {Video-500}
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
                 {/block:Video}
 
                 {block:Audio}
-                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on {DayOfMonth} {ShortMonth} {Year}</h2>
+                		<h2>Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a> on <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a></h2>
                         {AudioPlayerBlack}
 
                         {block:Caption}
                             <div class="description">{Caption}</div>
                         {/block:Caption}
-                    <div class="pagelink"><a href="{Permalink}">{PostID}</a></div>
+            <br />
+            <br />
                 {/block:Audio}
             {/block:Posts}
 
-</div>
+            <div id="pagenav">
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}
+                {block:PreviousPage}{block:NextPage}&#8967;{/block:Nextpage}{/block:PreviousPage}
+                {block:NextPage}
+                    <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+
+            </div>
+
+        </div> <!-- fivehundo -->
+
+		<div id="endblock">
+			<div class="eighty">
+				<div id="about">
+				<h1>About STEAM</h1>
+                {Description}
+				</div>
+				<div id="contact2">
+					<h1 style="color: black">.</h1>
+					Michelle Site<br />
+					michelle_site at brown.edu<br /><br />
+
+					Hanna McPhee<br />
+                    hanna_mcphee at brown.edu<br /><br />
+
+                    Lukas WinklerPrins<br />
+                    lukas at brown.edu<br /><br />
+
+                    Gabe Filsinger<br />
+                    gabriel_filsinger at brown.edu
+				</div>
+
+				<div id="contact1">
+					<h1>Contact</h1>
+					Co-President:<br /><br /><br />
+                    Co-President:<br /><br /><br />
+                    Vice President:<br /><br /><br />
+                    Discussion Coordinator:<br />
+				</div>
+			</div>
+		</div>
 
 	</body>
 </html>
