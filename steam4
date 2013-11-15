@@ -15,29 +15,6 @@
 		<a href="#intro"><img src="logo.png" id="logo"></a>
         <div id="nav"><a href="http://steamwith.us">steam<a> <h6>&#11040;</h6> <a href="#about">about</a> <h6>&#11040;</h6> <a href="#tumblr_embed">blog</a> <h6>&#11040;</h6> <a href="#calendar">calendar</a> <h6>&#11040;</h6> <a href="#contact">contact us</a> </div>
 		<div id="intro">
-<<<<<<< HEAD
-		</div>
-		<h1 id="tagline">RISD STEAM aims to give art students the tools to engage with the sciences.</h1>
-		
-		<div id="calendar_blog">
-			<!-- <div class="eighty"> -->
-				<h1 id="cal_link" class="eighty">Upcoming Events</h1>
-				<div class="event"><h2>BWxD: Prototyping in Lego</h2></div>
-				<div class="event"><p>one two three four five six seven eight nine ten.</p></div>
-				<div class="event"><p>one two three four five six seven eight nine ten.</p></div>
-				<br />
-				<h1 id="blog_link" class="eighty">What's New</h1>
-				<div class="post eighty">
-				<span class="posttitle">Dead Grandmother Syndrome</span>&nbsp; &nbsp; &nbsp; &nbsp;<span class="postdate small">Posted by Lukas on 21 Aug 2013</span><br />
-				<p> It has long been theorized that the week prior to an exam is an extremely dangerous time for the relatives of college students. Ever since I began my teaching career, I heard vague comments, incomplete references and unfinished remarks, all alluding to the "Dead Grandmother Problem."</p>
-
-				<p>Few colleagues would ever be explicit in their description of what they knew, but I quickly discovered that anyone who was involved in teaching at the college level would react to any mention of the concept. In my travels I found that a similar phenomenon is known in other countries. In England it is called the "Graveyard Grannies'' problem, in France the "Chere Grand'mere," while in Bulgaria it is inexplicably known as "The Toadstool Waxing Plan" (I may have had some problems here with the translation. Since the revolution this may have changed anyway.) Although the problem may be international in scope it is here in the USA that it reaches its culmination, so it is only fitting that the first warnings emanate here also.</p>
-				</div>
-				<div class="post eighty">
-				<span class="posttitle">Another Post Title</span>&nbsp; &nbsp; &nbsp; &nbsp;<span class="postdate small">Posted by Catherine on 9 Aug 2013</span>
-				<p>Contents of the post. Want more? Click <a href="">here</a>.</p>
-				</div>
-=======
             <h1><p style="background: rgba(0,0,0,0);">RISD STEAM aims to give art students the tools to engage with the sciences.</p></h1>
 		</div>
 
@@ -59,7 +36,6 @@
 			</div>
 			<div class="post eighty">
                 <p> Want more? See <a href="http://risd.steamwith.us/blog">our blog</a>.
->>>>>>> a98e0ff6a0ad6ba6ddba9521a90ac2b42f492b93
 			</div>
 		</div>
             -->
@@ -111,8 +87,3 @@
 	</div> -->
     </body>
 </html>
-
-<!-- Things to add/replace:
-Favicon
-BG Image
-

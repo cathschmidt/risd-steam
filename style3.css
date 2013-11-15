@@ -56,11 +56,21 @@ p {
 	margin-bottom: 0;
 }
 
+a {
+  color: #FFC127;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #FFC127
+}
+
 /*/////////////////////////////////////
 ///// Nav ///////////////////////////*/
 
 div#nav {
-	background: #333332;
+	xbackground: #333332;
+  background: black;
 	color: white;
 	position: fixed;
 	top: 0px;
@@ -122,8 +132,8 @@ h1#tagline {
 
 img#logo {
 	position: fixed;
-	top: 10%;
-	left: 15%;
+	top: 15%;
+	left: 3%;
 	width: 150px;
 	height: auto;
 	z-index: 1;
@@ -142,9 +152,11 @@ div.eighty {
 	margin-left: 10%;
 	margin-right: 10%;
 	z-index: 5;
+  display: block;
+  clear: both;
 }
 
-div#calendar_blog {
+div#about {
 	/* clear: both; */
 	margin-left: 10%;
 	margin-right: 10%;
@@ -153,7 +165,7 @@ div#calendar_blog {
 	z-index: 5;
 }
 
-#calendar_blog .event{
+#tumblr_embed .event{
 	float:left;
 	height: 200px;
 	width: 250px;
@@ -165,15 +177,15 @@ div#calendar_blog {
 	z-index: 5;
 }
 
-#calendar_blog .event h2{
+#tumblr_embed .event h2{
 	vertical-align: bottom;
 }
 
-#calendar_blog .event h3 {
+#tumblr_embed .event h3 {
 	vertical-align: text-bottom;
 }
 
-#calendar_blog .post{
+#tumblr_embed .post{
 	width: 80%;
 	max-width: 850px;
 	margin-left: auto;
@@ -190,22 +202,22 @@ div#calendar_blog {
 /*/////////////////////////////////////
 ///// Blog Type /////////////////////*/
 
-#calendar_blog h1 {
-	width: 30%;
+#tumblr_embed h1 {
+	width: 40%;
 	border-bottom: 10px solid #333332;
 	font-size: 35px;
 	clear: both;
 	margin-top: 30px;
 }
 
-#calendar_blog .posttitle {
+#tumblr_embed .posttitle {
 	font-weight: 700;
-	font-size: 20px; 
+	font-size: 20px;
 	line-height: 20px;
 	display: inline;
 }
 
-#calendar_blog .postdate {
+#tumblr_embed .postdate {
 	display: inline;
 	font-size: 15px;
 	color: #838B8B;
@@ -213,30 +225,30 @@ div#calendar_blog {
 }
 
 /*/////////////////////////////////////
-///// Footer ////////////////////////*/
+///// About Block ///////////////////*/
 
-#endblock {
-	clear: all;
-	background: black;
-	color: white;
+#about {
+  background: black;
+  color: white;
 	width: 100%;
 	z-index: 5;
-	position: absolute;
-	left: 0px;
 	font-size: 14px;
+  position: absolute;
+  display: block;
+  z-index: 4;
 }
 
-#endblock h1 {
+#about h1 {
 	font-size: 18px;
 }
 
-#endblock #about{
+#about #story{
 	width: 65%;
 	float: left;
 	display: inline;
 	margin-bottom: 30px;
 }
-#endblock #contact1{
+#about #contact1{
 	width: 10%;
 	float: right;
 	display: inline;
@@ -245,7 +257,7 @@ div#calendar_blog {
 	font-size: 12px;
 	line-height: 14px;
 }
-#endblock #contact2{
+#about #contact2{
 	width: 20%;
 	float: right;
 	display: inline;
@@ -254,4 +266,20 @@ div#calendar_blog {
 	line-height: 14px;
 }
 
+#about #buffer{
+  color: black;
+  background: white;
+  width: 100%;
+  clear: both;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#about #buffer img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
