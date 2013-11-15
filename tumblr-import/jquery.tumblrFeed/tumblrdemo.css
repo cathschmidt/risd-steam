@@ -1,0 +1,79 @@
+* {
+ 	margin:0;
+ 	padding:0;
+ 	font-weight:normal;
+ }
+
+a {}
+
+ul {}
+
+li {}
+
+span {}
+
+/* Tumblr Classes */
+article.post {} 
+
+h2.entry-title {}
+
+form.search {}
+
+div.notes {}
+
+a.high-res {}
+
+/* post is used with one of the other post-type classes below */
+article.text {}
+
+article.photo {}
+
+article.photo-set {}
+
+article.video {}
+
+article.answer {}
+
+article.audio {}
+
+article.chat {}
+
+article.link {}
+
+article.quote {}
+
+/* other classes on the risdsteam tumblr theme */
+/* also, on the risdsteam tumblr, all of the
+   tumblr classes are assigned to divs, not
+   articles */
+
+div.blogt {} /* blog title */
+
+div.permalink {}
+
+div.caption {}
+
+div.notes {}
+
+div.notetitle {}
+
+div.text2 {} /* what is this?? */
+
+div.title {} /* used with link post type */
+
+span.title {} /* used with text post type */
+
+div.content {} /* wrapper for blog content */
+
+div.information {} /* info side bar */
+
+
+
+ /* Tumblr Ids */
+div#wrapper {}
+
+div#logo {}
+
+p#description {}
+
+div#main {} /* where the posts are */

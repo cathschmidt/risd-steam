@@ -1,0 +1,169 @@
+<html>
+	<!-- This is Tumblr's "complete markup for a tumblr theme" via 
+		 http://www.tumblr.com/docs/en/custom_themes -->
+
+	<!-- To Dos
+		1. develop stylesheet with correct classes/ids/tags
+		2. test
+		3. develop separate stylesheet for risd.steamwith.us and risd.steamwith.us/blog
+		4. import posts to risd.steamwith.us
+	-->
+
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    <body>
+        <h1>{Title}</h1>
+
+        {block:Description}
+            <p id="description">{Description}</p>
+        {/block:Description}
+
+
+<!-- //////////////////////////////////////////////////////
+    ////////////////////////////////////// Posts ///////// -->
+        <ol id="posts">
+            {block:Posts}
+
+<!-- //////////////////////////////////////////////////////
+    //////////////////////////////////////// Text ///////// -->
+                {block:Text}
+                    <li class="post text">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        {Body}
+                    </li>
+                {/block:Text}
+
+<!-- //////////////////////////////////////////////////////
+    ////////////////////////////////////// Photo ///////// -->
+                {block:Photo}
+                    <li class="post photo">
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photo}
+
+<!-- //////////////////////////////////////////////////////
+    //////////////////////////////////// Panorama ///////// -->
+                {block:Panorama}
+                    <li class="post panorama">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Panorama}
+
+<!-- //////////////////////////////////////////////////////
+    //////////////////////////////////// Photoset ///////// -->                
+                {block:Photoset}
+                    <li class="post photoset">
+                        {Photoset-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photoset}
+
+<!-- //////////////////////////////////////////////////////
+    /////////////////////////////////////// Quote ///////// -->
+                {block:Quote}
+                    <li class="post quote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+                {/block:Quote}
+
+<!-- //////////////////////////////////////////////////////
+    //////////////////////////////////.///// Link ///////// -->
+                {block:Link}
+                    <li class="post link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+                {/block:Link}
+
+<!-- //////////////////////////////////////////////////////
+    //////////////////////////////////////// Chat ///////// -->
+                {block:Chat}
+                    <li class="post chat">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+                {/block:Chat}
+
+<!-- //////////////////////////////////////////////////////
+    /////////////////////////////////////// Video ///////// -->
+                {block:Video}
+                    <li class="post video">
+                        {Video-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Video}
+
+<!-- //////////////////////////////////////////////////////
+    /////////////////////////////////////// Audio ///////// -->
+                {block:Audio}
+                    <li class="post audio">
+                        {AudioPlayerBlack}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Audio}
+            {/block:Posts}
+        </ol>
+
+<!-- //////////////////////////////////////////////////////
+    ////////////////////////////////////// Footer ///////// -->
+        <p id="footer">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+            {/block:PreviousPage}
+
+            {block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+            {/block:NextPage}
+
+            <a href="/archive">Archive</a>
+        </p>
+    </body>
+</html>
