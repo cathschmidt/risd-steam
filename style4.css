@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-size:16px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #333332;
+}
+
+.test {
+  width: 70%;
+  margin:auto;
+}
+
+
+/*/////////////////////////////////////
+///// Type //////////////////////////*/
+
+h1{}
+
+p {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+a {
+  xcolor: #FFC127;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid black;
+}
+
+a:hover{
+  xcolor: #D1A022;
+  border-bottom: none;
+}
+
+/*/////////////////////////////////////
+///// Nav ///////////////////////////*/
+
+div#nav {
+  background: #0e0e0e;
+  color: white;
+  position: fixed;
+  top: 0px;
+  font-family: 'Cutive Mono', Monaco, monospace;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  font-size: 20px;
+}
+
+div#nav a{
+  color: white;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+
+div#nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+div#nav h6{
+  display: inline;
+  position: relative;
+  top: 5px;
+  margin: 0;
+  padding: 0px;
+  padding-top: 6px;
+  font-size: 35px;
+}
+
+/*/////////////////////////////////////
+///// Intro /////////////////////////*/
+
+div#intro {
+  width: 100%;
+  height: 800px;
+  background: url('hero.jpeg') fixed no-repeat;
+  background-size: cover;
+  background-position:center;
+  z-index: 1;
+  overflow: visible;
+}
+
+div#intro h1 {
+  color: #FFC127;
+  width:50%;
+  margin:auto;
+  padding-top: 25%;
+  padding-left: 20%;
+  text-shadow: 0px 0px 3px rgba(0,0,0,.5);
+}
+
+/*/////////////////////////////////////
+///// Logo //////////////////////////*/
+
+img.logo {
+  position: fixed;
+  top: 15%;
+  left: 3%;
+  width: 150px;
+  height: auto;
+  z-index: 2;
+  text-align: center; /* not sure if this line is necessary */
+}
+
+a img#logo{
+  border: none;
+}
+
+/*/////////////////////////////////////
+///// Layout ////////////////////////*/
+
+#content {
+  z-index: 4;
+  width: 100%;
+  clear: both;
+  position: absolute;
+  left: 0px;
+}
+
+#content .chunk_a{
+  background: white;
+  color: black;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+#content .chunk_a h2{
+  width: 40%;
+  border-bottom: 10px solid #0e0e0e;
+  padding-bottom: 5px;
+  font-size: 35px;
+  clear: both;
+  margin-top: 30px;
+  color: #0e0e0e;
+}
+
+#content .chunk_b{
+  background: #0e0e0e;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+#content .chunk_b h2{
+  width: 40%;
+  border-bottom: 10px solid white;
+  padding-bottom: 5px;
+  font-size: 35px;
+  clear: both;
+  margin-top: 30px;
+  color: white;
+}
+#content .chunk_b a{
+  color: white;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid white;
+}
+#content .chunk_b a:hover{
+  border-bottom: none;
+}
+
+#content #buffer{
+  color: black;
+  background: white;
+  width: 100%;
+  clear: both;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#content #buffer img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
