@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Brown STEAM</title>
+        <link rel="stylesheet" href="brown.css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="brown_favicon.ico" type="image/x-icon" />
+
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top - 45
+                    }, 800);
+                });
+
+                $("#nav3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#tumblr_embed").offset().top - 45
+                    }, 800);
+                });
+                $("#nav4").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#calendar").offset().top - 45
+                    }, 800);
+                });
+                $("#nav5").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top - 45
+                    }, 800);
+                });
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if (scrollTop > (showPoint)) { //when we reach showPoint
+                        $("#logo_small").show("slow"); //show
+                        $("#xlogo_small").fadeIn("slow");
+                    } else {
+                        $("#logo_small").hide("slow"); // else hide
+                        $("#xlogo_small").fadeOut("slow");
+                    }
+                });
+
+                function logoselect() {
+                    number = Math.floor(Math.random()*6) + 1;
+                    url = "http://ltwp.net/steam/images/bsteam" + number + ".png";
+                    // once you have a variety of logos, put them all in some folder
+                    // with a consistent naming scheme, e.g. bsteam1.png, bsteam2.png, ...
+                    // then change the number '6' above to however many varieties you have
+                    // (then obviously un-x the above url line, remove the one below this)
+
+                    $('.logo').attr("src",url);
+                }
+
+                window.onload = logoselect;
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>&#11040;</h6> <a id="nav2" href="#about">about</a> <h6>&#11040;</h6> <a id="nav3" href="#tumblr_embed">blog</a> <h6>&#11040;</h6> <a id="nav4" href="#calendar">calendar</a> <h6>&#11040;</h6> <a id="nav5" href="#contact">contact us</a>
+        </div>
+
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);">RISD STEAM aims to give art students the tools to engage with the sciences.</p></h1>
+        </div>
+
+        <a href="#intro"><img class="logo" id="logo_big" src="" /></a>
+        <a href="#intro"><img class="logo" id="logo_small" src="" /></a>
+
+        <div id="content">
+            <div class="chunk_a" id="about">
+                <h2>About Us</h2>
+                <p>Brown STEAM is a student group at <a href="http://brown.edu">Brown University</a>. The mentality of STEAM hinges upon the ability to draw astute connections between disciplines and fearlessly explore potential for collaboration at the interface. We strive to integrate the creativity and aesthetics of the arts; the problem solving tools and rigor of the STEM fields; and the critical thinking and ethical considerations of the humanities. We believe that this unification powerfully drives progress toward the future.</p>
+                <p>As a student group we hold regular meetings, usually made up of STEAM-related discussions, speakers, or events. We also host on-campus workshops, do outreach within Brown and the local community, and take occasional field trips. We seek to provide a platform, resource base, and discussion group for interdisciplinary thinking and projects.</p>
+            </div>
+            <div class="chunk_a" id="tumblr_embed">
+                <h2>Updates</h2>
+                <!-- INSERT TUMBLR BLOG CODE HERE -->
+                <p>Want more? See <a href="http://brownsteam.tumblr.com">our blog</a> in full.</p>
+            </div>
+            <div class="chunk_a" id="calendar">
+                <h2>Calendar</h2>
+                <br />
+                <div style="text-align: center;"><iframe src="https://www.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=hdn2afrt9bn3u102f6mbj9bvmk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+            </div>
+
+            <div class="chunk_b" id="contact">
+                <h2>Contact</h2>
+
+                <div id="left">
+                    Michelle Site<br /> Biology '14<br /><br />
+                    Hanna McPhee<br /> Bio-Inspired Design '14<br /><br />
+                    Gabriel Filsinger<br /> Chemistry and Biophysics '14<br /><br />
+                    Lukas WinklerPrins<br /> Applied Mathematics '15<br /><br />
+                </div>
+                <div id="right">
+                    Co-President of Brown STEAM &#11040; <br /><br /><br />
+                    Co-President of Brown STEAM &#11040; <br /><br /><br />
+                    Co-Vice President &#11040; <br /><br /><br />
+                    Co-Vice President &#11040; <a href="http://ltwp.net">ltwp.net</a><br /><br />
+                </div>
+
+                <p style="clear: both"><br />Please reach out with any questions!</p>
+
+            </div>
+
+            <div id="buffer">
+                <br />
+                <a href="#intro"><img class="logo" id="logo_bottom" src="" width="80" /></a>
+                <br />
+                Property of Brown STEAM. Sponsored by <a href="http://browncreativemind.com">Brown Creative Mind Initiative</a> and <a href="http://www.brown.edu/academics/science-center/">Brown Science Center</a>.
+            </div>
+        </div>
+    </body>
+</html>
