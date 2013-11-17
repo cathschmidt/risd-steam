@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Montserrat';
-  font-size:16px;
+  font-size: 16px;
   line-height: 35px;
   font-weight: 400;
   color: #333332;
@@ -102,7 +102,7 @@ div#intro h1 {
 /*/////////////////////////////////////
 ///// Logo //////////////////////////*/
 
-img.logo {
+img#logo_big {
   position: fixed;
   top: 15%;
   left: 3%;
@@ -112,13 +112,27 @@ img.logo {
   text-align: center; /* not sure if this line is necessary */
 }
 
-a img#logo{
-  border: none;
+img#logo_small {
+  position: fixed;
+  top: 15%;
+  left: 2%;
+  width: 80px;
+  height: auto;
+  z-index: 5;
+  text-align: center;
+  display: none;
+  xopacity: 0;
+}
+
+img#logo_bottom {
+  width: 80px;
+  height: auto;
 }
 
 /*/////////////////////////////////////
 ///// Layout ////////////////////////*/
 
+/* BIG OL CONTAINER THING */
 #content {
   z-index: 4;
   width: 100%;
@@ -127,6 +141,7 @@ a img#logo{
   left: 0px;
 }
 
+/* chunk_a has white background */
 #content .chunk_a{
   background: white;
   color: black;
@@ -145,6 +160,7 @@ a img#logo{
   color: #0e0e0e;
 }
 
+/* chunk_b has black background, special formatting */
 #content .chunk_b{
   background: #0e0e0e;
   color: white;
@@ -172,6 +188,24 @@ a img#logo{
   border-bottom: none;
 }
 
+#content .chunk_b #left{
+  width: 20%;
+  margin-left: 5%;
+  float: left;
+  font-family: Monaco, monospace;
+  font-size: 13px;
+  line-height: 16px;
+  padding-top: 20px;
+}
+#content .chunk_b #right{
+  width: 65%;
+  float: right;
+  font-size: 16px;
+  line-height: 16px;
+  padding-top: 20px;
+}
+
+/* bottom buffer spot for logo and acknowledgements */
 #content #buffer{
   color: black;
   background: white;
@@ -181,10 +215,11 @@ a img#logo{
   line-height: 14px;
   text-align: center;
   padding-bottom: 20px;
+  clear: both;
 }
 
 #content #buffer img{
   margin-left: auto;
   margin-right: auto;
   display: block;
-
+}

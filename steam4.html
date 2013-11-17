@@ -1,10 +1,14 @@
 <html>
 
     <!-- To Dos:
-        2. Get mini-logo to fade in during content blocks
+        1. [[DONE]] Get logo to disappear behind content blocks
+        2. [[DONE]] Get mini-logo to fade in during content blocks
         3. Tumblr log integration
-        4. Logo cycling
-        5. Format Contact Us Chunk
+        4. [[DONE]] Logo cycling
+        5. [[DONE]]Format Contact Us Chunk
+        6. Get rid of "flicker" when nav links clicked
+        7. get mini-logo fade to be opacity, not size...
+        8. general tidying of CSS and fixing small things
     -->
     <head>
         <title>RISD STEAM</title>
@@ -12,8 +16,8 @@
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
         <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
 
-        <link rel="shortcut icon" href="http://ltwp.net/steam/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="http://ltwp.net/steam/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="http://ltwp.net/steam/bsteam.ico" type="image/x-icon" />
+
 
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript">
@@ -44,13 +48,37 @@
 
                 $(document).scroll(function() {
                     var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
-                    var showPoint = $("#show-anchor").offset().top; //distance of anchor #show-anchor from the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
                     if (scrollTop > (showPoint)) { //when we reach showPoint
-                        $("#thing-to-show").show("slow"); //show
+                        $("#logo_small").show("slow"); //show
+                        $("#clogo_small").css("opacity","1");
+                        $("#xlogo_small").animate({
+                            opacity: "1",
+                        }, 500);
+                        $("#xlogo_small").fadeIn("slow");
                     } else {
-                        $("#thing-to-show").hide("slow"); // else hide
+                        $("#logo_small").hide("slow"); // else hide
+                        $("#xlogo_small").css("opacity","0");
+                        $("#xlogo_small").animate({
+                            opacity: "0",
+                        }, 500);
+                        $("#xlogo_small").fadeOut("slow");
                     }
                 });
+
+                function logoselect() {
+                    number = Math.floor(Math.random()*6) + 1;
+                    xurl = "http://ltwp.net/steam/images/bsteam" + number + ".png";
+                    // once you have a variety of logos, put them all in some folder
+                    // with a consistent naming scheme, e.g. bsteam1.png, bsteam2.png, ...
+                    // then change the number '6' above to however many varieties you have
+                    // (then obviously un-x the above url line, remove the one below this)
+                    url = "logo.png"
+                    $('.logo').attr("src",url);
+                }
+
+                window.onload = logoselect;
+
             });
         </script>
 
@@ -66,7 +94,8 @@
             <h1><p style="background: rgba(0,0,0,0);">RISD STEAM aims to give art students the tools to engage with the sciences.</p></h1>
         </div>
 
-        <a href="#intro"><img class="logo" src="logo.png" /></a>
+        <a href="#intro"><img class="logo" id="logo_big" src="" /></a>
+        <a href="#intro"><img class="logo" id="logo_small" src="" /></a>
 
         <div id="content">
             <div class="chunk_a" id="about">
@@ -89,16 +118,31 @@
 
             <div class="chunk_b" id="contact">
                 <h2>Contact</h2>
-                <p><a href="mailto:info@risdsteam.org">Email us!</a></p>
+
+                <div id="left">
+                    Catherine Leigh Schmidt<br /> GD '14<br /><br />
+                    Eliot Basset-Cann<br /> Arch '14<br /><br />
+                    Ryan Flomerfelt Mather<br /> ID '15<br /><br />
+                </div>
+                <div id="right">
+                    President of RISD STEAM &#11040; @cathschmidt &#11040; <a href="http://www.cathschmidt.com">cathschmidt.com</a><br /><br /><br />
+                    Vice President of Outreach &#11040; @EliotBassettCan<br /><br /><br />
+                    Vice President of Programming &#11040; @Seafoamteeth &#11040; <a href="http://www.ryanflomerfelt.com">ryanflomerfelt.com</a><br /><br /><br />
+                </div>
+
+                <p style="clear: both"><br />Please reach out with any questions and <a href="mailto:info@risdsteam.org">email us!</a></p>
+
+                <!--
 <p>Please reach out to our team with any questions:</p>
 <p>Catherine Leigh Schmidt, GD '14<br/> President of RISD STEAM &#11040; @cathschmidt &#11040; <a href="http://www.cathschmidt.com">cathschmidt.com</a></p>
 <p>Eliot Basset-Cann, Arch '14<br/> Vice President of Outreach &#11040; @EliotBassettCan</p>
 <p>Ryan Flomerfelt Mather, ID '15<br/> Vice President of Programming &#11040; @Seafoamteeth &#11040; <a href="http://www.ryanflomerfelt.com">ryanflomerfelt.com</a></p>
+                 -->
             </div>
 
             <div id="buffer">
                 <br />
-                <a href="#intro"><img src="logo.png" width="80" /></a>
+                <a href="#intro"><img class="logo" id="logo_bottom" src="" width="80" /></a>
                 <br />
                 Property of RISD STEAM. Sponsored by the Rhode Island School of Design Center for Student Involvement.
             </div>
