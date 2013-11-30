@@ -1,0 +1,137 @@
+<html>
+
+    <!-- To Dos:
+        1. [[DONE]] Get logo to disappear behind content blocks
+        2. [[DONE]] Get mini-logo to fade in during content blocks
+        3. Tumblr log integration
+        4. [[DONE]] Logo cycling
+        5. [[DONE]] Format Contact Us Chunk
+        6. Get rid of "flicker" when nav links clicked
+        7. get mini-logo fade to be opacity, not size...
+        8. Finish contact us formatting... tables??? eek
+    -->
+    <head>
+        <title>Wintersession/IAP 2014: Human + Computer</title>
+        <link rel="stylesheet" href="style4.css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="brown_favicon.ico" type="image/x-icon" />
+
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top - 45
+                    }, 800);
+                });
+
+                $("#nav3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#tumblr_embed").offset().top - 45
+                    }, 800);
+                });
+                $("#nav4").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#calendar").offset().top - 45
+                    }, 800);
+                });
+                $("#nav5").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top - 45
+                    }, 800);
+                });
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if (scrollTop > (showPoint)) { //when we reach showPoint
+                        $("#logo_small").show("slow"); //show
+                        $("#xlogo_small").fadeIn("slow");
+                    } else {
+                        $("#logo_small").hide("slow"); // else hide
+                        $("#xlogo_small").fadeOut("slow");
+                    }
+                });
+
+                function logoselect() {
+                    number = Math.floor(Math.random()*6) + 1;
+                    xurl = "http://ltwp.net/steam/images/bsteam" + number + ".png";
+                    // once you have a variety of logos, put them all in some folder
+                    // with a consistent naming scheme, e.g. bsteam1.png, bsteam2.png, ...
+                    // then change the number '6' above to however many varieties you have
+                    // (then obviously un-x the above url line, remove the one below this)
+                    url = "combined_logo.png"
+                    $('.logo').attr("src",url);
+                }
+
+                window.onload = logoselect;
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>&#11040;</h6> <a id="nav2" href="#about">about</a> <h6>&#11040;</h6> <a id="nav3" href="#tumblr_embed">blog</a> <h6>&#11040;</h6> <a id="nav4" href="#calendar">calendar</a> <h6>&#11040;</h6> <a id="nav5" href="#contact">contact us</a>
+        </div>
+
+        <!--
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);">RISD STEAM aims to give art students the tools to engage with the sciences.</p></h1>
+        </div>
+        -->
+
+        <a href="#intro"><img class="logo" id="logo_big" src="" /></a>
+        <a href="#intro"><img class="logo" id="logo_small" src="" /></a>
+
+        <div style="margin-top: 60px" id="content">
+            <div class="chunk_a" id="about">
+                <h2>About Human + Computer</h2>
+                <p>Transhumanism is the belief that the human race can evolve beyond its current limitations through the use of science and technology. However, will our accelerating transformation into cyborgs be a form of transcendence or are we building our own prisons of technology?<br /><br />
+
+                    This class will combine the design of new body/machine interfaces with learning relevant technical skills in electronics, digital fabrication, and programming. With a focus on building wearable devices, human augmentation, and alternative, more visceral forms of communication, students from MIT, Brown, and RISD will work in groups to conceptualize, prototype, and finally build functioning versions of their ideas in whatever form they will take. Students will read related science fiction short stories and theory readings and be introduced to work within the fields of critical and speculative design as well as recent developments within the field of human computer interaction. In particular, students will learn to use the Arduino GSM Shield, which allows for the simple creation of functioning cell phones, and be introduced to digital fabrication processes like lasercutting and 3d printing, all the while staying in touch with fine art processes such as printmaking and casting. The culmination of the course will be an exhibition of the student work in Expose, RISD's student-run gallery.<br /><br />
+
+                    This series is open to RISD/Brown and MIT undergraduate and graduate students in any department, for free! Students are encouraged to form partnerships at the end of the first day with students from the other school(s), and to work collaboratively. This is a non-credit bearing class, just a workshop series for your own personal fulfillment. The workshop series will be rigorous, though. We think it's very possible to make some very compelling work together for the show in January!<br /><br />
+
+                    There will be four sessions, one on each of the following days and locations:Saturday January 11th - MIT, Saturday January 18th - RISD, Saturday January 25th - MIT, Saturday February 1st - RISD (Note that the final date is not consistent with some of the posters, this is the correct date). Workshops will go from 10am until 4pm, with the option to stay for longer. There will also be TA hours during the week to help with assignments, both at MIT and at RISD. We have a great lineup of activities and guests to enrich the process. We are looking for a very diverse group of students so we really encourage everyone to apply!<br /><br />
+
+                    If you have any questions, don't hesitate to email us at info@risdsteam.org. Applications are due by December 15th, and decisions will be sent out by the 22nd. Only applications from individuals who can attend all four sessions will be considered.<br /><br />
+
+                    RISD STEAM + BROWN STEAM + MIT MEDIA LAB<br /><br />
+
+                    PLEASE APPLY <a href="https://docs.google.com/forms/d/1q1jy4CRDaC-c8fWrIO93Di4m3xgHaVSUUoYUwK_n_y0/viewform">HERE</a>!<br />
+
+                    <img width="800" src="http://lh3.googleusercontent.com/i_2d7Z41TwCtGf9e2MEE2exUIpeyozKX70kKQlmGA4yct8Y87Zqu332Ybrsv4AQywjI" />
+                </p>
+            </div>
+
+            <div class="chunk_b" id="contact">
+                <h2>Contact</h2>
+
+                <div id="left">
+                    Ryan Mather<br /> ID '15<br /><br />
+                </div>
+                <div id="right">
+                    Chief Organizer &#11040; @Seafoamteeth &#11040; <a href="http://www.ryanflomerfelt.com">ryanflomerfelt.com</a><br /><br /><br />
+                </div>
+
+                <p style="clear: both"><br />Please reach out with any questions and <a href="mailto:info@risdsteam.org">email us!</a></p>
+
+            </div>
+
+            <div id="buffer">
+                <br />
+                <a href="#intro"><img class="logo" id="logo_bottom" src="" width="80" /></a>
+                <br />
+                Property of RISD STEAM, Brown STEAM, and the MIT Media Lab.
+            </div>
+        </div>
+    </body>
+</html>
