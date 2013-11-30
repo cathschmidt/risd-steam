@@ -1,0 +1,144 @@
+<html>
+
+    <!-- To Dos:
+        1. [[DONE]] Get logo to disappear behind content blocks
+        2. [[DONE]] Get mini-logo to fade in during content blocks
+        3. Tumblr log integration
+        4. [[DONE]] Logo cycling
+        5. [[DONE]] Format Contact Us Chunk
+        6. Get rid of "flicker" when nav links clicked
+        7. get mini-logo fade to be opacity, not size...
+        8. Finish contact us formatting... tables??? eek
+        9. Fix Favicon
+    -->
+    <head>
+        <title>RISD STEAM</title>
+        <link rel="stylesheet" href="style4.css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="brown_favicon.ico" type="image/x-icon" />
+
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top - 45
+                    }, 800);
+                });
+
+                $("#nav3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#tumblr_embed").offset().top - 45
+                    }, 800);
+                });
+                $("#nav4").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#calendar").offset().top - 45
+                    }, 800);
+                });
+                $("#nav5").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top - 45
+                    }, 800);
+                });
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if (scrollTop > (showPoint)) { //when we reach showPoint
+                        $("#logo_small").show("slow"); //show
+                        $("#xlogo_small").fadeIn("slow");
+                    } else {
+                        $("#logo_small").hide("slow"); // else hide
+                        $("#xlogo_small").fadeOut("slow");
+                    }
+                });
+
+                function logoselect() {
+                    number = Math.floor(Math.random()*6) + 1;
+                    xurl = "http://ltwp.net/steam/images/bsteam" + number + ".png";
+                    // once you have a variety of logos, put them all in some folder
+                    // with a consistent naming scheme, e.g. bsteam1.png, bsteam2.png, ...
+                    // then change the number '6' above to however many varieties you have
+                    // (then obviously un-x the above url line, remove the one below this)
+                    url = "logo.png"
+                    $('.logo').attr("src",url);
+                }
+
+                window.onload = logoselect;
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>&#11040;</h6> <a id="nav2" href="#about">about</a> <h6>&#11040;</h6> <a id="nav3" href="#tumblr_embed">blog</a> <h6>&#11040;</h6> <a id="nav4" href="#calendar">calendar</a> <h6>&#11040;</h6> <a id="nav5" href="#contact">contact us</a>
+        </div>
+
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);">RISD STEAM wants to help shape the rapidly changing role of artists and designers in society.</p></h1>
+        </div>
+
+        <a href="#intro"><img class="logo" id="logo_big" src="" /></a>
+        <a href="#intro"><img class="logo" id="logo_small" src="" /></a>
+
+        <div id="content">
+            <div class="chunk_a" id="about">
+                <h2>About Us</h2>
+                <p>RISD STEAM is a student group at the Rhode Island School of design which aims to engage students with the rising push to include art and design thinking into the traditional "STEM" model of education. By turning STEM into STEAM, the club strives to foster a new kind of learning, promoting high-level, transformative thinking among the next generation of leaders and innovators. We encourage students to investigate the principles of STEAM in their own work, by hosting events and building networks within the Providence community and with students from neighboring institutions such as Brown University and Massachusetts Institute of Technology.</p>
+<p>RISD STEAM is a student-run organization sponsored by the Rhode Island School of Design Center for Student Involvement.</p>
+<p>For more on RISD's effort to turn STEM into STEAM, please visit <a href="http://stemtosteam.org">stemtosteam.org</a>.</p>
+<p>Stay updated with RISD STEAM news by <a href="http://eepurl.com/Hh8J9">joining our mailing list</a>.</p>
+            </div>
+            <div class="chunk_a" id="tumblr_embed">
+                <h2>Updates</h2>
+                <!-- INSERT TUMBLR BLOG CODE HERE -->
+                <p>Want more? See <a href="http://risdsteam.org">our blog</a> in full.</p>
+            </div>
+            <div class="chunk_a" id="calendar">
+                <h2>Calendar</h2>
+                <br />
+                <div style="text-align: center;"><iframe src="https://www.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=hdn2afrt9bn3u102f6mbj9bvmk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+            </div>
+
+            <div class="chunk_b" id="contact">
+                <h2>Contact</h2>
+
+                <div id="left">
+                    Catherine Leigh Schmidt<br /> GD '14<br /><br />
+                    Eliot Basset-Cann<br /> Arch '14<br /><br />
+                    Ryan Flomerfelt Mather<br /> ID '15<br /><br />
+                </div>
+                <div id="right">
+                    President of RISD STEAM &#11040; @cathschmidt &#11040; <a href="http://www.cathschmidt.com">cathschmidt.com</a><br /><br /><br />
+                    Vice President of Outreach &#11040; @EliotBassettCan<br /><br /><br />
+                    Vice President of Programming &#11040; @Seafoamteeth &#11040; <a href="http://www.ryanflomerfelt.com">ryanflomerfelt.com</a><br /><br /><br />
+                </div>
+
+                <p style="clear: both"><br />Please reach out with any questions and <a href="mailto:info@risdsteam.org">email us!</a></p>
+
+                <!--
+<p>Please reach out to our team with any questions:</p>
+<p>Catherine Leigh Schmidt, GD '14<br/> President of RISD STEAM &#11040; @cathschmidt &#11040; <a href="http://www.cathschmidt.com">cathschmidt.com</a></p>
+<p>Eliot Basset-Cann, Arch '14<br/> Vice President of Outreach &#11040; @EliotBassettCan</p>
+<p>Ryan Flomerfelt Mather, ID '15<br/> Vice President of Programming &#11040; @Seafoamteeth &#11040; <a href="http://www.ryanflomerfelt.com">ryanflomerfelt.com</a></p>
+                 -->
+            </div>
+
+            <div id="buffer">
+                <br />
+                <a href="#intro"><img class="logo" id="logo_bottom" src="" width="80" /></a>
+                <br />
+                Property of RISD STEAM. Sponsored by the Rhode Island School of Design Center for Student Involvement.
+            </div>
+        </div>
+    </body>
+</html>
