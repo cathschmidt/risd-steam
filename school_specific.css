@@ -1,0 +1,11 @@
+div#intro{
+
+  background: url('http://steamwith.us/generic_bg.JPG') fixed no-repeat;
+  background-size: cover;
+  background-position:center;
+
+}
+
+div#intro h1 {
+  color: white;
+}
