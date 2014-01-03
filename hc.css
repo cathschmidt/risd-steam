@@ -1,0 +1,40 @@
+div#intro{
+
+  background: url("./generic_bg.JPG") fixed no-repeat;
+  background-size: cover;
+  background-position:center;
+
+}
+
+div#intro h1 {
+  color: white;
+}
+
+::-moz-selection {
+    background-color: black;
+}
+
+::selection {
+    background-color: black;
+}
+
+<!-- Within the directory, you need "logo_big.png", "logo_small.png", "favicon.ico", and "background.png" files for the images.
+     Text must be edited manually via HTML.
+     Edit: Title, Tagline, All content, buffer attributes to sponsors.
+-->
+
+.media_box{
+  height: 470px; <!-- 470 no white at bottom, 500 with captions -->
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 0 auto;
+}
+
+.media_box img{
+  margin: 5px;
+  height: 450px;
+  width: auto;
+  display: inline;
+}
