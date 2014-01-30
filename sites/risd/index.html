@@ -1,0 +1,193 @@
+<html>
+    <head>
+
+        <!-- THINGS THAT NEED EDITING @ EACH SCHOOL:
+                1. color of text over top photos
+                2. logo(s)
+                3. text content--title,
+                4. favicon
+        -->
+
+        <title>RISD STEAM</title>
+        <link rel="stylesheet" href="template.css" />
+        <link rel="stylesheet" href="school_specific.css" />
+        <link rel="stylesheet" href="tumblr_embed.css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="risd_favicon.ico" type="image/x-icon" />
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-46633079-1', 'steamwith.us');
+            ga('send', 'pageview');
+
+        </script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top - 45
+                    }, 800);
+                });
+
+                $("#nav3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#blog").offset().top - 45
+                    }, 800);
+                });
+                $("#nav4").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#involved").offset().top - 45
+                    }, 800);
+                });
+                $("#nav5").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top - 45
+                    }, 800);
+                });
+                $(".logo").click(function() {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000);
+                });
+
+                //$(document).scroll(function() {
+                //    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                //    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                //    if (scrollTop > (showPoint)) { //when we reach showPoint
+                //        $("#logo_small").show("slow"); //show
+                //    } else {
+                //        $("#logo_small").hide("slow"); // else hide
+                //    }
+                //});
+
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if(scrollTop > showPoint+50) {
+                        //$('#logo_small').animate({left: 20},500);
+                        $('#logo_small').fadeIn();
+                        //$('#logo_small').animate({
+                            //top: "100"
+                        //},800);
+                    } else {
+                        //$('#logo_small').animate({left: -100},500);
+                        $('#logo_small').fadeOut();
+                        //$('#logo_small').animate({
+                            //top: "-20"
+                        //},800);
+                    }
+                    // ANIMATE() TAKES TOO DAMN LONG ARGH
+                });
+
+
+                //var scrollTop = $(document).scrollTop();
+                //$('#logo_small').css("top",scrollTop);
+                //var showPoint = $("#content").offset().top - 20;
+                //if(scrollTop > showPoint){
+                //    start = $('#logo_small').css("top");
+                //    diff = scrollTop - showPoint;
+                //    $('#logo_small').css("top",start + diff);
+                //}
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>/</h6> <a id="nav2" href="#">about us</a> <h6>/</h6> <a id="nav4" href="#">get involved</a> <h6>/<!--&#8967; &#11040;--></h6> <a id="nav3" href="#">resources</a> <h6>/</h6> <a id="nav5" href="#">contact</a>
+        </div>
+
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);">RISD STEAM wants to help shape the rapidly changing role of artists and designers in society.</p></h1>
+        </div>
+
+        <a href="#intro"><img class="logo" id="logo_big" src="logo_big.png" /></a>
+
+
+        <div id="content">
+            <a href="#intro" style="border: none"><img class="logo" id="logo_small" src="logo_small.png" /></a>
+            <div class="chunk_a" id="about">
+                <h2>About Us</h2>
+                <p>
+                    RISD STEAM is a student group at the <a href="http://risd.edu">Rhode Island School of Design</a> which aims to engage students with the rising push to include art and design thinking into the traditional "STEM" model of education. By turning STEM into STEAM, the club strives to foster a new kind of learning, promoting high-level, creative thinking among the next generation of leaders and innovators. We encourage students to investigate what STEAM might mean to them regardless of their field of study. We do this through hosting events that are workshops, lectures, and discussions. We also work to build networks within the Providence community and with students from neighboring institutions such as Brown University and Massachusetts Institute of Technology. We invite everyone to become a part of STEAM groups! We are equally interested in what every differing perspective might bring to our community. Find more information about how to get involved below.
+                </p>
+            </div>
+
+            <div class="chunk_a" id="involved">
+                <h2>Get Involved</h2>
+                <p>The first way to get more involved is to sign up for <a href="http://ltwp.us7.list-manage.com/subscribe?u=bfe7bb6c704871b06a26bce8d&id=dbc0f0612b">our newsletter</a>.
+                    After that, we recommend that you read about what we have been up to in our <a href="#">blog</a> and see if you can find something that interests you.
+                    Then, fill out a <a href="https://docs.google.com/a/risd.edu/forms/d/1nfSyKD2pN2TNyOerIeIcKqutXAmvxCz5NhjUD-dYC1A/viewform">profile here</a> and someone from our leadership team will reach out to you to help you figure out what the best way for you to get involved is.
+                    Everyone is welcome, regardless of your major or background. We think that a diversity of backgrounds is essential to our success. Of course, don't hesitate to email us anytime at <a href="mailto:info@steamwith.us">info@steamwith.us</a>. We can't wait to hear from you!</p>
+                <br />
+                <div style="text-align: center;"><iframe src="https://www.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=hdn2afrt9bn3u102f6mbj9bvmk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+            </div>
+
+            <div class="chunk_a" id="blog">
+                <h2>Resources</h2>
+                <!-- INSERT TUMBLR BLOG CODE HERE -->
+                <p>See <a href="http://risdsteam.org">our blog</a> in full for inspiration and record of what we have done.</p>
+                <p>We will have more here in the near future!</p>
+            </div>
+
+            <div class="chunk_b" id="contact">
+                <h2>Contact</h2>
+
+                <div id="one">
+                    <p>Two years ago,
+                        RISD STEAM was started by <a href="http://sarahpease.com">Sarah Pease</a>, a
+                        Junior at the time who was working in the
+                        office of government relations. Sarah saw
+                        the need for a student-led arm of the
+                        institutional initiative <a href="http://stemtosteam.org">STEM to STEAM</a>. One logo, and
+                        a trip to CSI later, and RISD STEAM was
+                        born.
+                    </p>
+                    <p>
+                        See our friends at <a href="http://brown.steamwith.us">Brown STEAM</a>.
+                    </p>
+                    <p>
+                        Email us: risd@steamwith.us
+                    </p>
+                </div>
+
+                <div id="two">
+                    President <br /><br /><br /><br />
+                    VP Outreach<br /><br /><br /><br />
+                    VP Programming<br /><br /><br /><br />
+                    VP<br /><br /><br /><br />
+                </div>
+
+                <div id="two">
+                    C.L. SCHMIDT <br /><a href="http://cathschmidt.com">cathschmidt.com</a><br /> Graphic Design '14<br /><br />
+                    Eliot BASSETT-CANN<br /> Architecture '14<br /><br /><br />
+                    Ryan MATHER <br /> <a href="http://ryanflomerfelt.com">ryanflomerfelt.com</a> <br /> Industrial Design '15<br /><br />
+                    Lucia MONGE <br /> <a href="http://luciamonge.com">luciamonge.com</a> <br /> Sculpture Grad<br /><br />
+                    </div>
+
+                <p style="clear: both"><br />Some of our friends: <a href="http://betaspring.com">Betaspring</a>, <a href="http://designforamerica.com">Design for America</a>, <a href="http://www.abetterworldbydesign.com">A Better World By Design</a>, <a href="http://csi.risd.edu/student-groups/risd-quickies/">RISD Quickies</a>, <a href="http://www.risdeship.com">RISD E'Ship</a>.</p>
+
+            </div>
+
+            <div id="buffer">
+                <br />
+                <a href="#intro"><img class="logo" id="logo_bottom" src="logo_small.png" width="80" /></a>
+                <br />
+                Property of RISD STEAM. Sponsored by RISD <a href="http://csi.risd.edu">Center for Student Involvement</a>.
+            </div>
+        </div>
+    </body>
+</html>

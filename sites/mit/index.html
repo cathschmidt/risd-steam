@@ -1,0 +1,168 @@
+<html>
+    <head>
+
+        <!-- THINGS THAT NEED EDITING @ EACH SCHOOL:
+                1. color of text over top photos
+                2. logo(s)
+                3. text content--title,
+                4. favicon
+        -->
+
+        <title>STEAM: Innovation Through Integration</title>
+        <link rel="stylesheet" href="template.css" />
+        <link rel="stylesheet" href="school_specific.css" />
+        <link rel="stylesheet" href="tumblr_embed.css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="mit_favicon.ico" type="image/x-icon" />
+
+        <xscript type="text/javascript" src="http://brownsteam.tumblr.com/js" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-46633079-1', 'steamwith.us');
+            ga('send', 'pageview');
+
+        </script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top - 45
+                    }, 800);
+                });
+
+                $("#nav3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#blog").offset().top - 45
+                    }, 800);
+                });
+                $("#nav4").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#involved").offset().top - 45
+                    }, 800);
+                });
+                $("#nav5").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top - 45
+                    }, 800);
+                });
+                $(".logo").click(function() {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000);
+                });
+
+                //$(document).scroll(function() {
+                //    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                //    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                //    if (scrollTop > (showPoint)) { //when we reach showPoint
+                //        $("#logo_small").show("slow"); //show
+                //    } else {
+                //        $("#logo_small").hide("slow"); // else hide
+                //    }
+                //});
+
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if(scrollTop > showPoint+50) {
+                        //$('#logo_small').animate({left: 20},500);
+                        $('#logo_small').fadeIn();
+                        //$('#logo_small').animate({
+                            //top: "100"
+                        //},800);
+                    } else {
+                        //$('#logo_small').animate({left: -100},500);
+                        $('#logo_small').fadeOut();
+                        //$('#logo_small').animate({
+                            //top: "-20"
+                        //},800);
+                    }
+                    // ANIMATE() TAKES TOO DAMN LONG ARGH
+                });
+
+
+                //var scrollTop = $(document).scrollTop();
+                //$('#logo_small').css("top",scrollTop);
+                //var showPoint = $("#content").offset().top - 20;
+                //if(scrollTop > showPoint){
+                //    start = $('#logo_small').css("top");
+                //    diff = scrollTop - showPoint;
+                //    $('#logo_small').css("top",start + diff);
+                //}
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>/</h6> <a id="nav2" href="#">about us</a> <h6>/</h6> <a id="nav4" href="#">get involved</a> <h6>/<!--&#8967; &#11040;--></h6> <a id="nav5" href="#">contact</a>
+        </div>
+
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);">MIT STEAM wants to unite artists and engineers.</p></h1>
+        </div>
+
+        <a href="#intro"><img class="logo" id="logo_big" src="logo_big.png" /></a>
+
+
+        <div id="content">
+            <a href="#intro" style="border: none"><img class="logo" id="logo_small" src="logo_small.png" /></a>
+            <div class="chunk_a" id="about">
+                <h2>About Us</h2>
+                <p>MIT STEAM is a student-led effort to ignite communications between disparate fields in academia, business, and thought. Our focus is broad but our starting point is uniting the Arts with STEM (Science, Technology, Engineering, Mathematics).</p>
+                <p>Our current project is a Wintersession/IAP workshop series between RISD, Brown, and MIT. It is called <a href="http://steamwith.us/hc">HUMAN+COMPUTER</a>.
+            </div>
+
+            <div class="chunk_a" id="involved">
+                <h2>Get Involved</h2>
+                <p>Anyone is welcome, regardless of your major or background. We think that a diversity of backgrounds is essential to our success. Of course, don't hesitate to email us anytime at <a href="mailto:mit@steamwith.us">info@steamwith.us</a>. We can't wait to hear from you!</p>
+                <p>See our companion studios: <a href="http://risd.steamwith.us">RISD</a>, <a href="http://brown.steamwith.us">Brown</a>.
+                <p>If you are interested in starting a chapter of STEAM at your university or organization, please visit <a href="http://steamwith.us/new">steamwith.us/new</a>.</p>
+                <br />
+            </div>
+
+            <div class="chunk_b" id="contact">
+                <h2>Contact</h2>
+
+                <div id="one">
+                    <p>
+                        STEAM is a growing movement and needs your help! Please get in touch: <br /><a href="mailto:info@steamwith.us">info at steamwith.us</a>
+                    </p>
+                </div>
+
+                <div id="two">
+                    President MIT STEAM<br /><br /><br /><br />
+                    Advisor MIT STEAM<br /><br /><br /><br />
+                </div>
+
+                <div id="two">
+                    Grace LI <br /> '17<br /><br /><br />
+                    Alice HUANG <br /> 6.2A '15<br /><br /><br />
+                </div>
+
+                <p style="clear: both"></p>
+
+            </div>
+
+            <div id="buffer">
+                <br />
+                <a href="#intro"><img class="logo" id="logo_bottom" src="logo_small.png" width="80" /></a>
+                <br />
+                Property of MIT STEAM. Sponsored by ...
+            </div>
+        </div>
+    </body>
+</html>

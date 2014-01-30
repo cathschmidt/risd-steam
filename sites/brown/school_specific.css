@@ -1,0 +1,24 @@
+div#intro{
+
+  background: url("brown_bg.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position:center;
+
+}
+
+div#intro h1 {
+  color: #cc0000;
+}
+
+::-moz-selection {
+    background-color: #cc0000;
+}
+
+::selection {
+    background-color: #cc0000;
+}
+
+<!-- Within the directory, you need "logo_big.png", "logo_small.png", "favicon.ico", and "background.png" files for the images.
+     Text must be edited manually via HTML.
+     Edit: Title, Tagline, All content, buffer attributes to sponsors.
+-->
